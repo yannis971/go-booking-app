@@ -16,6 +16,9 @@ func main() {
 	var lastName string
 	var email string
 	var userTickets uint
+	//var arrayOfNames = [50]string{"Jack", "Nicole", "Jenny"}
+	var arrayOfNames [50]string
+	var sliceOfNames []string
 
 	fmt.Println("Welcome to", conferenceName, "booking application")
 	fmt.Printf("Welcome to %s booking application\n", conferenceName)
@@ -41,6 +44,19 @@ func main() {
 	fmt.Println("Memory address of variable userTickets is", &userTickets)
 	fmt.Printf("userTickets is type %T, conferenceName is %T\n", userTickets, conferenceName)
 	fmt.Printf("%v tickets remaining for %v\n", remainingTickets, conferenceName)
+
+	arrayOfNames[0] = firstName + " " + lastName
+	sliceOfNames = append(sliceOfNames, firstName+" The GOAT !")
+
+	fmt.Printf("The whole array : %v\n", arrayOfNames)
+	fmt.Printf("The first value : %v\n", arrayOfNames[0])
+	fmt.Printf("arrayOfNames is type : %T\n", arrayOfNames)
+	fmt.Printf("len(arrayOfNames) is : %v\n", len(arrayOfNames))
+
+	fmt.Printf("The whole slice : %v\n", sliceOfNames)
+	fmt.Printf("The first value : %v\n", sliceOfNames[0])
+	fmt.Printf("sliceOfNames is type : %T\n", sliceOfNames)
+	fmt.Printf("len(sliceOfNames) is : %v\n", len(sliceOfNames))
 
 	var chaine string
 
