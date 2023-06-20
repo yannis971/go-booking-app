@@ -8,6 +8,14 @@ import (
 	"strings"
 )
 
+func conditional_loop() {
+	var i uint = 0
+	for i < 10 {
+		fmt.Printf("i = %d\n", i)
+		i++
+	}
+}
+
 func infinite_loop() {
 	var exitFunction string
 	for {
@@ -96,6 +104,8 @@ func main() {
 	infinite_loop()
 
 	for_each_loop()
+
+	conditional_loop()
 
 }
 
