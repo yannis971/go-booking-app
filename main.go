@@ -8,6 +8,38 @@ import (
 	"strings"
 )
 
+func conditional_loop() {
+	var i uint = 0
+	for i < 10 {
+		fmt.Printf("i = %d\n", i)
+		i++
+	}
+}
+
+func infinite_loop() {
+	var exitFunction string
+	for {
+		_ = readString("type exit to end loop : ", &exitFunction)
+		if strings.Compare(exitFunction, "exit") == 0 {
+			break
+		}
+	}
+}
+
+func for_each_loop() {
+	var fullNames [3]string
+	fullNames[0] = "Lewis Hamilton"
+	fullNames[1] = "Lebron James"
+	fullNames[2] = "Michael Jordan"
+	var firtNames []string
+	for _, fullName := range fullNames {
+		var names = strings.Fields(fullName)
+		firtNames = append(firtNames, names[0])
+	}
+	fmt.Printf("The firstnames are : %v\n", firtNames)
+
+}
+
 func main() {
 	var conferenceName = "Go Conference"
 	const conferenceTickets = 50
@@ -68,6 +100,12 @@ func main() {
 	} else {
 		fmt.Println(err)
 	}
+
+	infinite_loop()
+
+	for_each_loop()
+
+	conditional_loop()
 
 }
 
